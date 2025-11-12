@@ -101,7 +101,11 @@ public class Lista_simplemente_ligada {
     }
     
     public void BorrarDatoMayor(){
-        Nodo p = punta;
+        if(punta==null){
+            System.out.println("Lista vacía");
+        }
+        else {
+            Nodo p = punta;
         Nodo q = null;
         int DatoMayor=0;
         while(p!=null){
@@ -117,10 +121,15 @@ public class Lista_simplemente_ligada {
         }
         q.setEnlace(p.getEnlace());
         p.setEnlace(null);
+        }
     }
     
     public void listaInvertida (){
-        Nodo p= punta;
+       if(punta==null){
+            System.out.println("Lista vacía");
+        }
+        else {
+            Nodo p= punta;
         Nodo q=null;
         Nodo r=null;
         while(p!=null){
@@ -130,6 +139,7 @@ public class Lista_simplemente_ligada {
           p=r;
         }
         punta=q;
+        }
     }
             
         }
